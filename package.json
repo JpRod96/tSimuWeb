@@ -1,0 +1,34 @@
+{
+  "name": "tsimuweb",
+  "version": "1.0.0",
+  "description": "Web consumer for TsimuCore",
+  "main": "server.js",
+  "dependencies": {
+    "angular": "^1.6.10",
+    "angular-animate": "^1.6.10",
+    "angular-route": "^1.6.10",
+    "express": "^4.16.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JpRod96/tSimuWeb.git"
+  },
+  "keywords": [
+    "microservices",
+    "REST-consumer",
+    "angularjs",
+    "express",
+    "nodejs"
+  ],
+  "author": "TSimuTeanm",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JpRod96/tSimuWeb/issues"
+  },
+  "homepage": "https://github.com/JpRod96/tSimuWeb#readme"
+}
