@@ -1,0 +1,45 @@
+.contenedor1  { 
+    font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif; 
+    color: #ffffff; 
+    font-size: 18px; 
+    font-weight: 400; 
+    text-align: center; 
+    background: #889ccf; 
+    margin: 0 0 25px; 
+    overflow: hidden; 
+    padding: 20px; 
+    border-radius: 35px 0px 35px 0px; 
+    -moz-border-radius: 35px 0px 35px 0px; 
+    -webkit-border-radius: 35px 0px 35px 0px; 
+    border: 2px solid #5878ca;
+}
+.contenedor2 {
+    font-family: sans-serif;
+    width: 380px;
+    font-size: 18px;
+    font-weight: 400;
+    color: #ffffff;
+    background: #1f694b;
+    margin: 0 0 25px;
+    overflow: hidden;
+    padding: 20px;
+    }
+    
+table{
+    border:1px solid #000;
+    background:rgba(123, 134, 111, 0.836);
+    border-collapse: collapse;
+    width: 400px;
+}
+table td{
+    border: 1 px solid #000;
+    padding:20px;
+}
+table tr:hover{
+    background: rgba(123,134,111,0.836);
+    color:#000;
+}
+table td:hover{
+    background: #000;
+    color:#fff;
+}
