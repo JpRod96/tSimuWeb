@@ -1,5 +1,5 @@
 body{
-    background-image: linear-gradient( 135deg, rgb(59, 14, 80) 50%, rgb(109, 7, 243) 100%);
+    background-image: linear-gradient( 135deg, rgb(21, 97, 107) 50%, rgb(7, 137, 243) 100%);
 }
 .contenedor1  { 
     font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif; 
@@ -31,10 +31,18 @@ body{
     text-align: center;
 }
 
+.div-form{
+    left: 35%;
+}
+
+.div-form label{
+    font-size: 1em;
+}
+
 .contenedor-denuncias{
     width: 45vw;
     padding: 2vw 0 4vw 0;
-    background-image: linear-gradient( 135deg, rgb(7, 99, 99) 50%, rgb(116, 151, 228) 100%);
+    background-image: linear-gradient( 135deg, rgb(134, 154, 206) 50%, rgb(116, 151, 228) 100%);
     border-radius: 20%;
     position: relative;
     left: 25%;
