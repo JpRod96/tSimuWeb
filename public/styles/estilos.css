@@ -1,5 +1,6 @@
 body{
-    background-image: linear-gradient( 135deg, rgb(34, 214, 238) 50%, rgb(8, 100, 175) 100%);
+    background-image: linear-gradient( 135deg, rgb(164, 229, 238) 50%,
+     rgb(8, 140, 248) 100%);
 }
 .contenedor1  { 
     font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif; 
@@ -22,7 +23,7 @@ body{
     font-size: 1.2em;
     font-weight: 400;
     color: #ffffff;
-    background: #1f694b;
+    background: #7d8a85;
     margin: 0 0 25px;
     overflow: hidden;
     padding: 20px;
@@ -50,7 +51,7 @@ body{
     
 table{
     border:1px solid #000;
-    background:rgba(123, 134, 111, 0.836);
+    background:rgba(178, 179, 177, 0.836);
     border-collapse: collapse;
     width: 25vw;
 }
@@ -86,10 +87,7 @@ input,textarea{
     width: 100%;
     padding: 10px;
     box-sizing: border-box;
-    border: 1px solid #ccc;
-
-
-}
+    border: 1px solid #ccc;}
 input:focus, textarea:focus{
     border:1px solid #1668c4;
 
@@ -109,4 +107,22 @@ input[type="submit"]:hover{
     position: relative;
     width: 25vw;
     left:22%;
+}
+#procesandoFELCV {
+    background-color: #0dff19;
+}
+#procesandoMinisterioP {
+    background-color: #0dff19;
+}
+#procesandoFiscalia {
+    background-color: #0dff19;
+}
+#procesandoInvestigacion {
+    background-color: #0dff19;
+}
+#procesandoJuicio {
+    background-color: #0dff19;
+}
+#terminado {
+    background-color: #0dff19;
 }

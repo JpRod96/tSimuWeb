@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="styles/estilos.css">
+     </head>
+     <body>
+        <div class="contenedor1">
+            <h1>Historial de los Estados de la Denuncia</h1><br>
+        </div>
+            <button onclick="goBack()"> Go Back</button>
+            <script>
+                function goBack() {
+                window.history.back();}
+            </script>
+         <form class="contenedor2 div-form">
+             <label for="procesandoFELCV">Procesando en FELCV:</label>
+             <div><input type="text" id="procesandoFELCV"  disabled> </div>
+                    
+                    <br>
+                    <label for="procesandoMinisterioP">Procesando en Ministerio Publico:</label>
+                    <div><input type="text" id="procesandoMinisterioP" disabled></div>
+                   <br>
+                    <label for="procesandoFiscalia">Procesando en Fiscalia:</label>
+                    <div><input type="text" id="procesandoFiscalia" disabled></div>
+                    <br>
+                    <label for="procesandoInvestigacion">Procesando Investigacion:</label>
+                    <div><input type="text" id="procesandoInvestigacion" disabled></div>
+                    <br>
+                    <label for="procesandoJuicio">Procesando Juicio:</label>
+                    <div><input type="text" id="procesandoJuicio" disabled></div>
+                    <br>              
+                    <label for="terminado">Terminado:</label>
+                    <div><input type="text" id="terminado" disabled></div>
+                    <br>
+             </div>
+             
+              
+         </form>
+     </body>
+</html>
