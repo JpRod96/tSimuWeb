@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="styles/estilos.css">
+     </head>
+     <body>
+        <div class="contenedor1">
+            <h1>Resumen de Denuncia</h1><br>
+        </div>
+            <form action="./inicio.html" class="action-form">
+                <button class="bgGreenTurkish">Atras</button>
+            </form>
+         <div class="contenedor2 div-form">
+             <h1>Denuncia1</h1>
+             <label for="titulo">Titulo denuncia:</label>
+             <input type="text" id="titulo"  placeholder="Escriba el titulo de la denuncia" disabled> 
+             <br>
+              <label for="tipo">Tipo denuncia:</label>
+             <select name="tipo" size="1" disabled>
+                    <option value="denuncia">Denuncia</option>
+                    <option value="querella">Querella</option>
+                    
+              </select><br>
+              <label for="fechaEvento">Fecha Evento:</label>
+              <input type="date" name="fechaEvento" disabled><br>
+              <label for="fechaDenuncia">Fecha Denuncia:</label>
+              <input type="date" name="fechaDenuncia" disabled ><br>
+             <label for="ubicacion">Ubicacion:</label>
+             <input type="text" id="ubicacion" placeholder="Escriba la ubicacion del evento" disabled><br>
+            
+             <label for="descripcion">Descripcion:</label>
+              <!--<input type="textarea" id="descripcion" placeholder="Escriba la descripcion del hecho">-->
+              <textarea id="descripcion" placeholder="Escriba la descripcion del hecho"disabled> </textarea><br>
+              <label for="fechaEvento">Fecha Evento:</label>
+              <input type="date" name="fechaEvento"disabled ><br>
+              <form action="./historial-estados.html" class="action-form">
+                <button>Ver historial de Proceso</button>
+              </form>
+            </div>
+     </body>
+</html>

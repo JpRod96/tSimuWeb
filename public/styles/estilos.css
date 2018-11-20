@@ -1,0 +1,172 @@
+body{
+    background-image: linear-gradient( 135deg, rgb(164, 229, 238) 50%,
+     rgb(8, 140, 248) 100%);
+}
+.contenedor1  { 
+    font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif; 
+    color: #ffffff; 
+    font-size: 1.2em; 
+    font-weight: 400; 
+    text-align: center; 
+    background: #869ace; 
+    margin: 0 0 25px; 
+    overflow: hidden; 
+    padding: 20px; 
+    border-radius: 35px 0px 35px 0px; 
+    -moz-border-radius: 35px 0px 35px 0px; 
+    -webkit-border-radius: 35px 0px 35px 0px; 
+    border: 2px solid #5878ca;
+}
+.contenedor2 {
+    font-family: sans-serif;
+    width: 23vw;
+    font-size: 1.2em;
+    font-weight: 400;
+    color: #ffffff;
+    background: #7d8a85;
+    margin: 0 0 25px;
+    overflow: hidden;
+    padding: 20px;
+    position: relative;
+    left: 22%;
+    text-align: center;
+}
+
+.div-form{
+    left: 35%;
+}
+
+.div-form label{
+    font-size: 1em;
+}
+
+.contenedor-denuncias{
+    width: 45vw;
+    padding: 2vw 0 4vw 0;
+    background-image: linear-gradient( 135deg, rgb(134, 154, 206) 50%, rgb(116, 151, 228) 100%);
+    border-radius: 20%;
+    position: relative;
+    left: 25%;
+}
+    
+table{
+    border:1px solid #000;
+    background:rgba(178, 179, 177, 0.836);
+    border-collapse: collapse;
+    width: 25vw;
+}
+table td{
+    border: 1 px solid #000;
+    padding:20px;
+}
+table tr:hover{
+    background: rgba(123,134,111,0.836);
+    color:#000;
+}
+table td:hover{
+    background: #000;
+    color:#fff;
+}
+form{
+      width:25%;
+      border:1px solid #ccc;
+      margin: 20px;
+      padding: 20px;
+}
+label{
+    font-size: 12px;
+    width: 100%;
+}
+textarea{
+    resize:vertical;
+    max-height: 300px;
+    min-height: 100px;
+}
+input,textarea{
+    margin-bottom: 20px;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;}
+input:focus, textarea:focus{
+    border:1px solid #1668c4;
+
+}
+input[type="submit"]{
+    margin-bottom:0;
+    background: #1668C4;
+    color: #fff;
+    border:none;
+}
+input[type="submit"]:hover{
+    background: #4A88F4;
+    cursor: pointer;
+}
+
+.table-div{
+    position: relative;
+    width: 25vw;
+    left:22%;
+}
+#procesandoFELCV {
+    background-color: #f51616;
+}
+#procesandoMinisterioP {
+    background-color: #0dff19;
+}
+#procesandoFiscalia {
+    background-color: #0dff19;
+}
+#procesandoInvestigacion {
+    background-color: #0dff19;
+}
+#procesandoJuicio {
+    background-color: #0dff19;
+}
+#terminado {
+    background-color: #0dff19;
+}
+
+.estado{
+    width: 100%;
+    height: 10vh;
+    border: solid 0.01em black;
+    background-color: rgb(166, 168, 164);
+}
+
+.barraProgreso{
+    width:80%;
+    height: 30%;
+    border: solid 0.01em white;
+    position: relative;
+    left: 10%;
+}
+
+.bgRed{
+    background-color: red;
+}
+
+.bgGreen{
+    background-color: #0dff19;
+}
+
+.bgTurkish{
+    background-color: rgb(130, 220, 243);
+}
+
+.bgGreenTurkish{
+    background-color: rgb(62, 157, 235);
+}
+
+.action-form{
+    width: 80%;
+    border: none;
+    
+}
+
+.action-form button{
+    font-size: 1em;
+    color: rgb(18, 4, 54);
+    padding: 0.5em;
+    border-radius: 15%;
+}
