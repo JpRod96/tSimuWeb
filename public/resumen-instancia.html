@@ -7,34 +7,39 @@
         <div class="contenedor1">
             <h1>Resumen de Denuncia</h1><br>
         </div>
-            <form action="#!" class="action-form">
-                <button class="bgGreenTurkish">Atras</button>
-            </form>
          <div class="contenedor2 div-form">
-             <h1>Denuncia1</h1>
-             <label for="titulo">Titulo denuncia:</label>
-             <input type="text" id="titulo"  placeholder="Escriba el titulo de la denuncia" disabled> 
-             <br>
-              <label for="tipo">Tipo denuncia:</label>
-             <select name="tipo" size="1" disabled>
-                    <option value="denuncia">Denuncia</option>
-                    <option value="querella">Querella</option>
-                    
-              </select><br>
-              <label for="fechaEvento">Fecha Evento:</label>
-              <input type="date" name="fechaEvento" disabled><br>
-              <label for="fechaDenuncia">Fecha Denuncia:</label>
-              <input type="date" name="fechaDenuncia" disabled ><br>
-             <label for="ubicacion">Ubicacion:</label>
-             <input type="text" id="ubicacion" placeholder="Escriba la ubicacion del evento" disabled><br>
-            
-             <label for="descripcion">Descripcion:</label>
-              <textarea id="descripcion" placeholder="Escriba la descripcion del hecho"disabled> </textarea><br>
-              <label for="fechaEvento">Fecha Evento:</label>
-              <input type="date" name="fechaEvento"disabled ><br>
-              <form action="#!estado/1" class="action-form">
-                <button>Ver historial de Proceso</button>
-              </form>
+            <div>
+                <h1>Denuncia: {{event.id}}</h1>
             </div>
+            <div>
+                <label for="tipo">Tipo denuncia:</label>
+                <select name="tipo" size="1" disabled>
+                    <option value="denuncia">Denuncia</option>
+                    <option value="querella">Querella</option>       
+                </select>
+            </div>
+            <div>
+                <label for="fechaEvento">Fecha Evento:</label>
+                <input type="text" value="{{event.date}}" disabled><br>
+            </div>
+            <div>
+                <label for="fechaDenuncia">Fecha Denuncia:</label>
+                <input type="text" value="{{event.delationDate}}" disabled ><br>
+            </div>
+            <div>
+                <label for="ubicacion">Ubicacion:</label>
+                <input type="text" id="ubicacion" placeholder="{{event.locationDescription}}" disabled><br>
+            </div>
+            <div>
+                <label for="descripcion">Descripcion:</label>
+                <textarea id="descripcion" disabled>{{event.description}}</textarea><br>
+            </div>
+            <form action="#!estado/1" class="action-form">
+                <button>Ver historial de Proceso</button>
+            </form>
+        </div>
+        <form action="#!" class="action-form">
+            <button class="bgGreenTurkish">Atras</button>
+        </form>
      </body>
 </html>
