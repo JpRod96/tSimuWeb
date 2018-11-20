@@ -153,3 +153,20 @@ input[type="submit"]:hover{
 .bgTurkish{
     background-color: rgb(130, 220, 243);
 }
+
+.bgGreenTurkish{
+    background-color: rgb(62, 157, 235);
+}
+
+.action-form{
+    width: 80%;
+    border: none;
+    
+}
+
+.action-form button{
+    font-size: 1em;
+    color: rgb(18, 4, 54);
+    padding: 0.5em;
+    border-radius: 15%;
+}

@@ -5,14 +5,13 @@
      </head>
      <body>
         <div class="contenedor1">
-            <h1>Formulario de Denuncia</h1><br>
+            <h1>Resumen de Denuncia</h1><br>
         </div>
-            <button onclick="goBack()"> Go Back</button>
-            <script>
-                function goBack() {
-                window.history.back();}
-            </script>
-         <form class="contenedor2 div-form">
+            <form action="./inicio.html" class="action-form">
+                <button class="bgGreenTurkish">Atras</button>
+            </form>
+         <div class="contenedor2 div-form">
+             <h1>Denuncia1</h1>
              <label for="titulo">Titulo denuncia:</label>
              <input type="text" id="titulo"  placeholder="Escriba el titulo de la denuncia" disabled> 
              <br>
@@ -34,8 +33,9 @@
               <textarea id="descripcion" placeholder="Escriba la descripcion del hecho"disabled> </textarea><br>
               <label for="fechaEvento">Fecha Evento:</label>
               <input type="date" name="fechaEvento"disabled ><br>
-              <input type="submit" value="Ver historial Estados">
-              
-         </form>
+              <form action="./historial-estados.html" class="action-form">
+                <button>Ver historial de Proceso</button>
+              </form>
+            </div>
      </body>
 </html>
