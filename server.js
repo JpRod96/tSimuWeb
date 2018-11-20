@@ -14,7 +14,7 @@ function startServer() {
     port = 8000;
     }
     app.listen(port);
-    console.log("Server is up and running.\nOpen http://localhost:3000 to start");
+    console.log("Server is up and running.\nOpen http://localhost:"+port+" to start");
 }
 
 startServer();
