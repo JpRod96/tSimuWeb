@@ -11,24 +11,23 @@
                 <button class="bgGreenTurkish">Registrar una nueva denuncia</button>
             </form>
         </div>  
-        <div class="table-div">        
+        <div class="table-div">
             <table>
-                <ul class="misDenuncias">
-                    <tr>
+                <thead>
+                    <tr class="center-elements">
                         <td><strong>Nombre denuncia</strong></td>
                         <td><strong>Ver estado denuncia</strong></td>
                     </tr>
-                    <tr>
-                        <td><li><a href="#!ver/1">Denuncia1</a></li></td>
-                        <td><input type="button" value="Play" /></td>
-                        </tr>
-                        <tr>
-                            <td><li><a href="#">Denuncia2</a></li></td>
-                        <td><input type="button" value="Play" /></td>
-                        </tr>  
+                </thead>
+                <tfoot></tfoot>
+                <tbody>
+                    <tr ng-repeat="event in events">
+                        <td><a href="#!ver/{{event.id}}">{{event.id}}</a></td>
+                        <td><button>Play</button></td>
                     </tr>
-                </ul>
+                </tbody>
+                
             </table>
-        </div>
+        </div>            
     </div>
 </div>
