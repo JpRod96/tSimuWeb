@@ -109,7 +109,7 @@ input[type="submit"]:hover{
     left:22%;
 }
 #procesandoFELCV {
-    background-color: #0dff19;
+    background-color: #f51616;
 }
 #procesandoMinisterioP {
     background-color: #0dff19;
@@ -125,4 +125,31 @@ input[type="submit"]:hover{
 }
 #terminado {
     background-color: #0dff19;
+}
+
+.estado{
+    width: 100%;
+    height: 10vh;
+    border: solid 0.01em black;
+    background-color: rgb(166, 168, 164);
+}
+
+.barraProgreso{
+    width:80%;
+    height: 30%;
+    border: solid 0.01em white;
+    position: relative;
+    left: 10%;
+}
+
+.bgRed{
+    background-color: red;
+}
+
+.bgGreen{
+    background-color: #0dff19;
+}
+
+.bgTurkish{
+    background-color: rgb(130, 220, 243);
 }

@@ -7,34 +7,35 @@
         <div class="contenedor1">
             <h1>Historial de los Estados de la Denuncia</h1><br>
         </div>
-            <button onclick="goBack()"> Go Back</button>
-            <script>
-                function goBack() {
-                window.history.back();}
-            </script>
-         <form class="contenedor2 div-form">
-             <label for="procesandoFELCV">Procesando en FELCV:</label>
-             <div><input type="text" id="procesandoFELCV"  disabled> </div>
-                    
-                    <br>
-                    <label for="procesandoMinisterioP">Procesando en Ministerio Publico:</label>
-                    <div><input type="text" id="procesandoMinisterioP" disabled></div>
-                   <br>
-                    <label for="procesandoFiscalia">Procesando en Fiscalia:</label>
-                    <div><input type="text" id="procesandoFiscalia" disabled></div>
-                    <br>
-                    <label for="procesandoInvestigacion">Procesando Investigacion:</label>
-                    <div><input type="text" id="procesandoInvestigacion" disabled></div>
-                    <br>
-                    <label for="procesandoJuicio">Procesando Juicio:</label>
-                    <div><input type="text" id="procesandoJuicio" disabled></div>
-                    <br>              
-                    <label for="terminado">Terminado:</label>
-                    <div><input type="text" id="terminado" disabled></div>
-                    <br>
-             </div>
-             
-              
-         </form>
+        <form action="./inicio.html" method="GET">
+            <button>Atras</button>
+        </form>
+         <div class="contenedor2 div-form">
+            <h2>Historial Procesos de Denuncia1</h2>
+            <div class="estado">
+                <label >Procesado en FELCV:</label>    
+                <div class="barraProgreso bgGreen">Duro 2 dias</div>
+            </div>
+            <div class="estado">
+                <label>Procesado en Ministerio Publico:</label>    
+                <div class="barraProgreso bgGreen">Duro 3 dias</div>
+            </div>
+            <div class="estado">
+                <label>Procesado en Fiscalia:</label>    
+                <div class="barraProgreso bgGreen">Duro 6 dias</div>
+            </div>
+            <div class="estado">
+                <label>En investigacion:</label>    
+                <div class="barraProgreso bgRed">No se encontraron pruebas</div>
+            </div>
+            <div class="estado">
+                <label>En Juicio:</label>    
+                <div class="barraProgreso bgRed">El caso no llego a esta instancia</div>
+            </div>            
+            <div class="estado">
+                <label>Tiempo total:</label>    
+                <div class="barraProgreso bgTurkish">El caso duro 11 dias</div>
+            </div>
+        </div>
      </body>
 </html>
