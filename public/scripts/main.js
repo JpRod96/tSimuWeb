@@ -42,18 +42,22 @@ function fetchEventsScope(httpService, req, scope){
     });
 }
 
-app.controller("resumenCtrl", function($scope, $http, $routeParams){
+app.controller("resumenCtrl", function($scope, $http, $routeParams, $location){
     let id=$routeParams.id;
     let req = {
         method: 'GET',
         url: API_URL+EVENT_URL+"/"+id,
     }
-    fetchEventScope($http,req,$scope);
+    fetchEventScope($http,req,$scope,$location);
 });
 
-function fetchEventScope(httpService, req, scope){
+function fetchEventScope(httpService, req, scope, location){
     httpService(req)
     .then((response)=>{
+        let id=response.data.id;
+        scope.action =()=>{
+            location.path('!#/estado/'+id);
+        };
         scope.event=response.data;
     })
     .catch((error)=>{
@@ -61,7 +65,7 @@ function fetchEventScope(httpService, req, scope){
     });
 }
 
-app.controller("registroCtrl", function($scope, $http, $window){
+app.controller("registroCtrl", function($scope, $http, $location){
     $scope.event={
         eventDescription:"",
         locationDescription:"",
@@ -80,19 +84,37 @@ app.controller("registroCtrl", function($scope, $http, $window){
             },
             data: JSON.stringify($scope.event)
         }
-        postEvent($http, req, $window);
+        postEvent($http, req, $location);
     };
 });
 
-function postEvent(httpService, req, window){
-    console.log(req);
+function postEvent(httpService, req, location){
     httpService(req)
     .then((response)=>{
-        window.location.href = '/';
+        let id=response.data.id;
+        alert("SE REGISTRO LA DENUNCIA SATISFACTORIAMENTE\nId de denuncia: "+id);
+        location.path('/ver/'+id);
     })
     .catch((error)=>{
         console.error(error);
     });
 }
 
+app.controller("estadoCtrl", function($scope, $http, $routeParams){
+    let id=$routeParams.id;
+    let req = {
+        method: 'GET',
+        url: API_URL+EVENT_URL+"/"+id,
+    }
+    fetchProcessScope($http,req,$scope);
+});
 
+function fetchProcessScope(httpService, req, scope){
+    httpService(req)
+    .then((response)=>{
+        scope.process=response.data.process.evolution;
+    })
+    .catch((error)=>{
+        console.error(error);    
+    });
+}

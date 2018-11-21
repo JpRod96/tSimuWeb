@@ -11,27 +11,12 @@
             <button class="bgGreenTurkish">Atras</button>
         </form>
          <div class="contenedor2 div-form">
-            <h2>Historial Proceso de Denuncia1</h2>
-            <div class="estado">
-                <label >Procesado en FELCV:</label>    
-                <div class="barraProgreso bgGreen">Duro 2 dias</div>
+            <h2>Historial Proceso de {{id}}</h2>
+            <div class="estado" ng-repeat="state in process">
+                <label>Procesado en {{state.name}}:</label>    
+                <div ng-if="state.hasFailed" class="barraProgreso bgRed">{{state.description}}</div>
+                <div ng-if="!state.hasFailed" class="barraProgreso bgGreen">{{state.description}}</div>
             </div>
-            <div class="estado">
-                <label>Procesado en Ministerio Publico:</label>    
-                <div class="barraProgreso bgGreen">Duro 3 dias</div>
-            </div>
-            <div class="estado">
-                <label>Procesado en Fiscalia:</label>    
-                <div class="barraProgreso bgGreen">Duro 6 dias</div>
-            </div>
-            <div class="estado">
-                <label>En investigacion:</label>    
-                <div class="barraProgreso bgRed">No se encontraron pruebas</div>
-            </div>
-            <div class="estado">
-                <label>En Juicio:</label>    
-                <div class="barraProgreso bgRed">El caso no llego a esta instancia</div>
-            </div>            
             <div class="estado">
                 <label>Tiempo total:</label>    
                 <div class="barraProgreso bgTurkish">El caso duro 11 dias</div>
