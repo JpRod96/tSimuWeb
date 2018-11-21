@@ -42,22 +42,20 @@ function fetchEventsScope(httpService, req, scope){
     });
 }
 
-app.controller("resumenCtrl", function($scope, $http, $routeParams, $location){
+app.controller("resumenCtrl", function($scope, $http, $routeParams, $sce){
     let id=$routeParams.id;
     let req = {
         method: 'GET',
         url: API_URL+EVENT_URL+"/"+id,
     }
-    fetchEventScope($http,req,$scope,$location);
+    fetchEventScope($http,req,$scope,$sce);
 });
 
-function fetchEventScope(httpService, req, scope, location){
+function fetchEventScope(httpService, req, scope, sce){
     httpService(req)
     .then((response)=>{
         let id=response.data.id;
-        scope.action =()=>{
-            location.path('!#/estado/'+id);
-        };
+        scope.action =sce.trustAsUrl("#!/estado/"+id);
         scope.event=response.data;
     })
     .catch((error)=>{
@@ -101,7 +99,7 @@ function postEvent(httpService, req, location){
 }
 
 app.controller("estadoCtrl", function($scope, $http, $routeParams){
-    let id=$routeParams.id;
+    let id=$routeParams.pos;
     let req = {
         method: 'GET',
         url: API_URL+EVENT_URL+"/"+id,
