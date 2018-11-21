@@ -118,6 +118,9 @@ function fetchProcessScope(httpService, req, scope, sce, id){
         scope.process = evolution;
         scope.action = sce.trustAsUrl("#!/ver/"+id);
         scope.total = sumMsStates(evolution);
+        scope.start = () => {
+            start(evolution);
+        };
         hideLoadingImage();
     })
     .catch((error)=>{

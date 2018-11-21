@@ -243,5 +243,19 @@ input[type="submit"]:hover{
     padding: 1em;
     background-color: #4A88F4;
     color: #fff;
-    
+}
+
+.simulation-button{
+    font-size: 0.8em;
+    padding: 0.5em;
+    background-color: rgb(7, 204, 138);
+    color:black;
+    transition: 1000ms;
+}
+
+.simulation-button:hover{
+    transition: 400ms;
+    padding: 0.6em;
+    background-color: rgb(146, 236, 206);
+    color:black;
 }
