@@ -1,36 +1,30 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <link rel="stylesheet" type="text/css" href="styles/estilos.css">
-     </head>
-     <body>
-        <div class="contenedor1">
-            <h1>Formulario de Denuncia</h1><br>
+<div id="content-div">
+    <div class="contenedor1">
+        <h1>Formulario de Denuncia</h1><br>
+    </div>
+        <form class="contenedor2 div-form" ng-submit="submit()">
+        <div>
+            <label for="ubicacion">Descripcion del lugar de los hechos:</label>
+            <input ng-model="event.locationDescription" type="text" id="ubicacion" placeholder="Escriba la ubicacion del evento"><br>
         </div>
-         <form class="contenedor2 div-form" ng-submit="submit()">
             <div>
-                <label for="ubicacion">Descripcion del lugar de los hechos:</label>
-                <input ng-model="event.locationDescription" type="text" id="ubicacion" placeholder="Escriba la ubicacion del evento"><br>
-            </div>
-             <div>
-                <label for="tipo">Se presento la denuncia en:</label>
-                <select ng-model="event.initialState" name="tipo" size="1">
-                    <option value="FELCV">FELCV</option>
-                    <option value="Ministerio Publico">Ministerio Publico</option>
-                </select><br>
-            </div>
-            <div>
-                <label for="descripcion">Descripcion de los hechos:</label>
-                <textarea ng-model="event.eventDescription" id="descripcion" placeholder="Escriba la descripcion del hecho"> </textarea><br>
-            </div> 
-            <div>
-                <label for="fechaEvento">Fecha Evento:</label>
-                <input ng-model="event.timeMsEventDate" type="date" name="fechaEvento" ><br>
-            </div>
-              <button type="submit">Registrar</button>
-         </form>
-         <form action="#!" class="action-form">
-            <button class="bgGreenTurkish">Atras</button>
+            <label for="tipo">Se presento la denuncia en:</label>
+            <select ng-model="event.initialState" name="tipo" size="1">
+                <option value="FELCV">FELCV</option>
+                <option value="Ministerio Publico">Ministerio Publico</option>
+            </select><br>
+        </div>
+        <div>
+            <label for="descripcion">Descripcion de los hechos:</label>
+            <textarea ng-model="event.eventDescription" id="descripcion" placeholder="Escriba la descripcion del hecho"> </textarea><br>
+        </div> 
+        <div>
+            <label for="fechaEvento">Fecha Evento:</label>
+            <input ng-model="event.timeMsEventDate" type="date" name="fechaEvento" ><br>
+        </div>
+            <button type="submit">Registrar</button>
         </form>
-     </body>
-</html>
+        <form action="#!" class="action-form">
+        <button class="bgGreenTurkish">Atras</button>
+    </form>
+</div>

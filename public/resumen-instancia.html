@@ -1,45 +1,42 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <link rel="stylesheet" type="text/css" href="styles/estilos.css">
-     </head>
-     <body>
-        <div class="contenedor1">
-            <h1>Resumen de Denuncia</h1><br>
+<div id=loading class="loading-div">
+    <img class="loading-image" src="./assets/loading.gif" />
+</div>
+<div id="content-div" class="hidden">
+    <div class="contenedor1">
+        <h1>Resumen de Denuncia</h1><br>
+    </div>
+        <div class="contenedor2 div-form">
+        <div>
+            <h1>Denuncia: {{event.id}}</h1>
         </div>
-         <div class="contenedor2 div-form">
-            <div>
-                <h1>Denuncia: {{event.id}}</h1>
-            </div>
-            <div>
-                <label for="tipo">Tipo denuncia:</label>
-                <select name="tipo" size="1" disabled>
-                    <option value="denuncia">Denuncia</option>
-                    <option value="querella">Querella</option>       
-                </select>
-            </div>
-            <div>
-                <label for="fechaEvento">Fecha Evento:</label>
-                <input type="text" value="{{event.date}}" disabled><br>
-            </div>
-            <div>
-                <label for="fechaDenuncia">Fecha Denuncia:</label>
-                <input type="text" value="{{event.delationDate}}" disabled ><br>
-            </div>
-            <div>
-                <label for="ubicacion">Ubicacion:</label>
-                <input type="text" id="ubicacion" placeholder="{{event.locationDescription}}" disabled><br>
-            </div>
-            <div>
-                <label for="descripcion">Descripcion:</label>
-                <textarea id="descripcion" disabled>{{event.description}}</textarea><br>
-            </div>
-            <form action="{{action}}" class="action-form">
-                <button>Ver historial de Proceso</button>
-            </form>
+        <div>
+            <label for="tipo">Tipo denuncia:</label>
+            <select name="tipo" size="1" disabled>
+                <option value="denuncia">Denuncia</option>
+                <option value="querella">Querella</option>       
+            </select>
         </div>
-        <form action="#!" class="action-form">
-            <button class="bgGreenTurkish">Atras</button>
+        <div>
+            <label for="fechaEvento">Fecha Evento:</label>
+            <input type="text" value="{{event.date}}" disabled><br>
+        </div>
+        <div>
+            <label for="fechaDenuncia">Fecha Denuncia:</label>
+            <input type="text" value="{{event.delationDate}}" disabled ><br>
+        </div>
+        <div>
+            <label for="ubicacion">Ubicacion:</label>
+            <input type="text" id="ubicacion" placeholder="{{event.locationDescription}}" disabled><br>
+        </div>
+        <div>
+            <label for="descripcion">Descripcion:</label>
+            <textarea id="descripcion" disabled>{{event.description}}</textarea><br>
+        </div>
+        <form action="{{action}}" class="action-form">
+            <button>Ver historial de Proceso</button>
         </form>
-     </body>
-</html>
+    </div>
+    <form action="#!" class="action-form">
+        <button class="bgGreenTurkish">Atras</button>
+    </form>
+</div>

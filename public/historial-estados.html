@@ -1,27 +1,24 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <link rel="stylesheet" type="text/css" href="styles/estilos.css">
-     </head>
-     <body>
-        <div class="contenedor1">
-            <h1>Historial de los Estados de la Denuncia</h1><br>
+<div id=loading class="loading-div">
+    <img class="loading-image" src="./assets/loading.gif" />
+</div>
+<div id="content-div" class="hidden">
+    <div class="contenedor1">
+        <h1>Historial de los Estados de la Denuncia</h1><br>
+    </div>
+        <div class="contenedor2 div-form">
+        <h2>Historial Proceso de {{id}}</h2>
+        <div class="estado" ng-repeat="state in process">
+            <label>Procesado en {{state.name}}:</label>    
+            <label>Resumen de estado: {{state.description}}</label>    
+            <div ng-if="state.hasFailed" class="barraProgreso bgRed">Duro {{state.msDuration/10}} dias</div>
+            <div ng-if="!state.hasFailed" class="barraProgreso bgGreen">Duro {{state.msDuration/10}} dias</div>
         </div>
-         <div class="contenedor2 div-form">
-            <h2>Historial Proceso de {{id}}</h2>
-            <div class="estado" ng-repeat="state in process">
-                <label>Procesado en {{state.name}}:</label>    
-                <label>Resumen de estado: {{state.description}}</label>    
-                <div ng-if="state.hasFailed" class="barraProgreso bgRed">Duro {{state.msDuration/10}} dias</div>
-                <div ng-if="!state.hasFailed" class="barraProgreso bgGreen">Duro {{state.msDuration/10}} dias</div>
-            </div>
-            <div class="estado">
-                <label>Tiempo total:</label>    
-                <div class="barraProgreso bgTurkish">El caso duro 11 dias</div>
-            </div>
+        <div class="estado">
+            <label>Tiempo total:</label>    
+            <div class="barraProgreso bgTurkish">El caso duro 11 dias</div>
         </div>
-        <form action="#!ver/1" class="action-form">
-            <button class="bgGreenTurkish">Atras</button>
-        </form>
-     </body>
-</html>
+    </div>
+    <form action="{{action}}" class="action-form">
+        <button class="bgGreenTurkish">Atras</button>
+    </form>
+</div>

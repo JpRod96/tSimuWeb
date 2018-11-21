@@ -36,6 +36,7 @@ function fetchEventsScope(httpService, req, scope){
     httpService(req)
     .then((response)=>{
         scope.events=response.data;
+        hideLoadingImage();
     })
     .catch((error)=>{
         console.error(error);    
@@ -57,6 +58,7 @@ function fetchEventScope(httpService, req, scope, sce){
         let id=response.data.id;
         scope.action =sce.trustAsUrl("#!/estado/"+id);
         scope.event=response.data;
+        hideLoadingImage();
     })
     .catch((error)=>{
         console.error(error);    
@@ -98,19 +100,22 @@ function postEvent(httpService, req, location){
     });
 }
 
-app.controller("estadoCtrl", function($scope, $http, $routeParams){
+app.controller("estadoCtrl", function($scope, $http, $routeParams, $sce){
     let id=$routeParams.pos;
     let req = {
         method: 'GET',
         url: API_URL+EVENT_URL+"/"+id,
     }
-    fetchProcessScope($http,req,$scope);
+    fetchProcessScope($http,req,$scope, $sce);
 });
 
-function fetchProcessScope(httpService, req, scope){
+function fetchProcessScope(httpService, req, scope, sce){
     httpService(req)
     .then((response)=>{
+        let id=response.data.id;
         scope.process=response.data.process.evolution;
+        scope.action =sce.trustAsUrl("#!/ver/"+id);
+        hideLoadingImage();
     })
     .catch((error)=>{
         console.error(error);    
