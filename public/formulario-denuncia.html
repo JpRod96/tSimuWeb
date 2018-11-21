@@ -5,24 +5,24 @@
         <form class="contenedor2 div-form" ng-submit="submit()">
         <div>
             <label for="ubicacion">Descripcion del lugar de los hechos:</label>
-            <input ng-model="event.locationDescription" type="text" id="ubicacion" placeholder="Escriba la ubicacion del evento"><br>
+            <input autocomplete="off" ng-model="event.locationDescription" type="text" id="ubicacion" placeholder="Escriba la ubicacion del evento" required>
         </div>
-            <div>
-            <label for="tipo">Se presento la denuncia en:</label>
-            <select ng-model="event.initialState" name="tipo" size="1">
-                <option value="FELCV">FELCV</option>
+        <div>
+            <label>Se presento la denuncia en:</label>
+            <select ng-model="event.initialState" required>
+                <option selected value="FELCV" selected>FELCV</option>
                 <option value="Ministerio Publico">Ministerio Publico</option>
-            </select><br>
+            </select>
         </div>
         <div>
             <label for="descripcion">Descripcion de los hechos:</label>
-            <textarea ng-model="event.eventDescription" id="descripcion" placeholder="Escriba la descripcion del hecho"> </textarea><br>
+            <textarea ng-model="event.eventDescription" id="descripcion" placeholder="Escriba la descripcion del hecho" required> </textarea>
         </div> 
         <div>
             <label for="fechaEvento">Fecha Evento:</label>
-            <input ng-model="event.timeMsEventDate" type="date" name="fechaEvento" ><br>
+            <input ng-model="event.timeMsEventDate" type="date" name="fechaEvento" required><br>
         </div>
-            <button type="submit">Registrar</button>
+            <button type="submit" class="form-button">Registrar</button>
         </form>
         <form action="#!" class="action-form">
         <button class="bgGreenTurkish">Atras</button>

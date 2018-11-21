@@ -29,11 +29,12 @@
                             <a class="link" href="#!ver/{{event.id}}">{{event.id}}</a>
                         </td>
                         <td>
-                            <button class="play-button">Iniciar Simulacion</button>
+                            <form action="{{action+event.id}}" class="play-form">
+                                <button class="play-button">Iniciar Simulacion</button>
+                            </form>
                         </td>
                     </tr>
                 </tbody>
-                
             </table>
         </div>            
     </div>

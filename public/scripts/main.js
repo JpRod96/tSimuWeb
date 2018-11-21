@@ -24,18 +24,19 @@ app.config(function($routeProvider) {
     })
 });
 
-app.controller("mainCtrl", function($scope, $http){
+app.controller("mainCtrl", function($scope, $http, $sce){
     let req = {
         method: 'GET',
         url: API_URL+EVENTS_URL,
     }
-    fetchEventsScope($http,req,$scope);
+    fetchEventsScope($http,req,$scope, $sce);
 });
 
-function fetchEventsScope(httpService, req, scope){
+function fetchEventsScope(httpService, req, scope, sce){
     httpService(req)
     .then((response)=>{
         scope.events=response.data;
+        scope.action =sce.trustAsUrl("#!/estado/");
         hideLoadingImage();
     })
     .catch((error)=>{
@@ -106,18 +107,28 @@ app.controller("estadoCtrl", function($scope, $http, $routeParams, $sce){
         method: 'GET',
         url: API_URL+EVENT_URL+"/"+id,
     }
-    fetchProcessScope($http,req,$scope, $sce);
+    fetchProcessScope($http,req,$scope, $sce, id);
 });
 
-function fetchProcessScope(httpService, req, scope, sce){
+function fetchProcessScope(httpService, req, scope, sce, id){
     httpService(req)
     .then((response)=>{
-        let id=response.data.id;
-        scope.process=response.data.process.evolution;
-        scope.action =sce.trustAsUrl("#!/ver/"+id);
+        scope.id = id;
+        let evolution = response.data.process.evolution;
+        scope.process = evolution;
+        scope.action = sce.trustAsUrl("#!/ver/"+id);
+        scope.total = sumMsStates(evolution);
         hideLoadingImage();
     })
     .catch((error)=>{
         console.error(error);    
     });
+}
+
+function sumMsStates(array){
+    let total=0;
+    for(let state of array){
+        total+=state.msDuration;
+    }
+    return total/10;
 }

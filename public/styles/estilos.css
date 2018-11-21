@@ -47,7 +47,7 @@ body{
     background-image: linear-gradient( 135deg, rgb(134, 154, 206) 50%, rgb(116, 151, 228) 100%);
     border-radius: 20%;
     position: relative;
-    left: 25%;
+    left: 28%;
 }
     
 table{
@@ -205,6 +205,20 @@ input[type="submit"]:hover{
     padding: 0.5em;
     background-color: rgb(42, 55, 241);
     color: aliceblue;
+    position: relative;
+    left: -20%;
+    transition: 500ms;
+}
+
+.play-button:hover{
+    transition: 500ms;
+    background-color: rgb(142, 212, 240);
+    color: rgb(26, 27, 27);
+}
+
+.play-form{
+    width: 100%;
+    border: none;
 }
 
 .loading-div{
@@ -223,4 +237,11 @@ input[type="submit"]:hover{
 
 .hidden{
     display: none;
+}
+
+.form-button{
+    padding: 1em;
+    background-color: #4A88F4;
+    color: #fff;
+    
 }
