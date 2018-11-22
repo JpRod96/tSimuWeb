@@ -131,11 +131,20 @@ input[type="submit"]:hover{
     position: relative;
     width: 85%;
     left:23%;
+    padding: 20px;
 }
 
 @media only screen and (max-width: 768px) {
     .table-div{
-        left:10%;
+        width: 85%;
+        left: 5%;
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    .table-div{
+        width: 85%;
+        left: -0.2%;
     }
 }
 
