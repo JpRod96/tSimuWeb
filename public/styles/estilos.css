@@ -68,6 +68,7 @@ body{
     .contenedor-denuncias {
         width: 97vw;
         left: 0.1%;
+        margin-left: -1%;
         border-radius: 5%;
         padding: 2vh 0 4vh 0;
     }
@@ -145,7 +146,7 @@ input[type="submit"]:hover{
     .table-div{
         width: 85%;
         left: -0.2%;
-        margin-left: -1%;
+        margin-left: -2.5%;
     }
 }
 
