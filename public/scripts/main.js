@@ -115,6 +115,7 @@ function fetchProcessScope(httpService, req, scope, sce, id){
     .then((response)=>{
         scope.id = id;
         let evolution = response.data.process.evolution;
+        setStatesDescription(evolution);
         scope.process = evolution;
         scope.action = sce.trustAsUrl("#!/ver/"+id);
         scope.total = sumMsStates(evolution);
@@ -126,6 +127,13 @@ function fetchProcessScope(httpService, req, scope, sce, id){
     .catch((error)=>{
         console.error(error);    
     });
+}
+
+function setStatesDescription(array){
+    for(let state of array){
+        let descriptionArray=state.description.split('\n');
+        state.descArray=descriptionArray;
+    }
 }
 
 function sumMsStates(array){
