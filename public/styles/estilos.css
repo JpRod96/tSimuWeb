@@ -32,9 +32,23 @@ body{
     text-align: center;
 }
 
+@media only screen and (max-width: 768px) {
+    .contenedor2 {
+        width: 75vw;
+        left: 5%;
+    }
+}
+
 .div-form{
     width: 45vw;
     left: 25%;
+}
+
+@media only screen and (max-width: 768px) {
+    .div-form{
+        width: 85vw;
+        left: 1%;
+    }
 }
 
 .div-form label{
@@ -48,6 +62,15 @@ body{
     border-radius: 20%;
     position: relative;
     left: 28%;
+}
+
+@media only screen and (max-width: 768px) {
+    .contenedor-denuncias {
+        width: 97vw;
+        left: 2%;
+        border-radius: 10%;
+        padding: 2vh 0 4vh 0;
+    }
 }
     
 table{
@@ -106,9 +129,16 @@ input[type="submit"]:hover{
 
 .table-div{
     position: relative;
-    width: 25vw;
-    left:22%;
+    width: 85%;
+    left:23%;
 }
+
+@media only screen and (max-width: 768px) {
+    .table-div{
+        left:8%;
+    }
+}
+
 #procesandoFELCV {
     background-color: #f51616;
 }
@@ -236,8 +266,20 @@ input[type="submit"]:hover{
 }
 
 .loading-image{
+    width: 50vw;
+    height: 80vh;
     position: relative;
-    left:30%;
+    left: 25%;
+}
+
+@media only screen and (max-width: 768px) {
+    .loading-image{
+        width: 90vw;
+        height: 60vh;
+        position: relative;
+        left: 5%;
+        top: 15%;
+    }
 }
 
 .hidden{
