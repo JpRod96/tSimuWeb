@@ -5,9 +5,10 @@
     <div class="contenedor1">
         <h1>Historial de los Estados de la Denuncia</h1><br>
     </div>
-        <div class="contenedor2 div-form">
+    <div id="canvas" class="contenedor2 div-form">
         <h2>Historial Proceso de {{id}}</h2>
         <button class="simulation-button" ng-click="start()">Iniciar Simulacion</button>
+        <button class="simulation-button" ng-click="createPdf()">Imprimir</button>
         <div class="estado" ng-repeat="state in process track by $index">
             <div id="st-{{$index}}">
                 <label>Procesado en {{state.name}}:</label>

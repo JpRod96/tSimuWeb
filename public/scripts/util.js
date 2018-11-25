@@ -54,3 +54,19 @@ async function startProgressBar(element, state){
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
+
+function createPdf() {
+    console.log("esta entrando");
+    const toCanvas = document.querySelector("#canvas");
+    let pdf = new jsPDF('p', 'pt', 'a4');
+    let elementHandler = {
+    };
+    pdf.fromHTML(toCanvas, 15, 15, { 'elementHandlers': elementHandler });
+    /*let iframe = document.createElement('iframe');
+    iframe.setAttribute('style', 'position:absolute;right:0; top:0; bottom:0; height:100%; width:500px');
+    document.body.appendChild(iframe);
+    iframe.src = pdf.output('datauristring');*/
+    const formName = "Reporte";
+    pdf.save(formName+" Principal");
+    
+}

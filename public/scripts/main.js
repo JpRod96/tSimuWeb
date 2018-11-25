@@ -122,6 +122,12 @@ function fetchProcessScope(httpService, req, scope, sce, id){
         scope.start = () => {
             start(evolution);
         };
+        scope.start = () => {
+            start(evolution);
+        };
+        scope.createPdf = () => {
+            createPdf();
+        };
         hideLoadingImage();
     })
     .catch((error)=>{
