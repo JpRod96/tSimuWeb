@@ -7,7 +7,8 @@
     "angular": "^1.6.10",
     "angular-animate": "^1.6.10",
     "angular-route": "^1.6.10",
-    "express": "^4.16.4"
+    "express": "^4.16.4",
+    "jspdf": "^1.4.1"
   },
   "devDependencies": {},
   "scripts": {
